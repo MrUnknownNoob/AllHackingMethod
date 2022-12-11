@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>All hacking Method</title>
+<style>
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+
+<h2>Animated Collapsibles</h2>
+
+<p>A Collapsible:</p>
+<button class="collapsible">Open Collapsible</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<p>Collapsible Set:</p>
+<button class="collapsible">How to Change DNS in Kali??</button>
+<div class="content">
+  <p><b>Method 01:: </b><br>
+    rm -r /etc/resolv.conf<br>
+    nano /etc/resolv.conf<br>
+    nameserver 1.1.1.1<br>
+    nameserver 1.0.0.1<br>
+    sudo chattr +i /etc/resolv.conf<br>
+    sudo /etc/init.d/networking restart<br>
+    Source :: https://geekflare.com/change-dns-server/<br>
+       https://www.codegrepper.com/tpc/change+dns+kali+linux<br>
+
+    <b>Method 02::</b><br>
+    cat /etc/resolv.conf<br>
+    nano etc/dhcp/dhclient.conf<br>
+    prepend domain-name-servers 1.1.1.1, 1.0.0.1;<br>
+    service network-manager restart<br>
+    cat /etc/resolv.conf<br>
+       
+    </p>
+</div>
+<button class="collapsible">How to Change IP in Kali??</button>
+<div class="content">
+  <p>go to browser and type 'about:config' for firefox /'about:flags' or 'chrome://flags' for another browser<br>
+    search 'media.peerconnection.enabled' and disable it<br>
+    go to https://www.vpnbook.com/ and goto open vpn and download a server<br>
+    unzip filename<br>
+    openvpn filename<br>
+    type id and pass from website<br>
+    </p>
+</div>
+<button class="collapsible">TOR in Linux</button>
+<div class="content">
+  <p><b>Method 01::</b><br>
+    apt-get install tor -y<br>
+    download from tor site<br>
+    find the ‘complain’ and comment those para<br>
+    <b>Method 02::</b><br>
+    sudo apt update<br>
+    sudo apt install -y tor torbrowser-launcher<br>
+    torbrowser-launcher<br>
+    <b>Method 03::</b><br>
+    apt install torbrowser-launcher<br>
+    torbrowser-launcher<br>
+    </p>
+</div>
+
+<button class="collapsible">#</button>
+<div class="content">
+  <p><b>#
+    </p>
+</div>
+
+<button class="collapsible">#</button>
+<div class="content">
+  <p><b>#
+    </p>
+</div>
+
+<button class="collapsible">#</button>
+<div class="content">
+  <p><b>#
+    </p>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+</body>
+</html>
